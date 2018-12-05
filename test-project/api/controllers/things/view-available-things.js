@@ -19,7 +19,9 @@ module.exports = {
   fn: async function (inputs, exits) {
 
     // TODO: Only fetch things the user is supposed to see
-    var things = await Thing.find();
+    var things = await Thing.find({
+      owner: this.req.me.id
+    });
 
     // Respond with view.
     return exits.success({
