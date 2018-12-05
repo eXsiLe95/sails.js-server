@@ -10,7 +10,7 @@ module.exports = {
   inputs: {
     id: {
       type: 'number',
-      required: 'true'
+      required: true
     }
   },
 
