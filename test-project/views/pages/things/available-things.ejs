@@ -1,0 +1,12 @@
+<div id="available-things" v-cloak>
+
+  <h1>Available things</h1>
+  <p>These are the things available to borrow.</p>
+  <button>TODO</button>
+
+  <ul>
+    <li v-for="thing in things" @click="clickThing(thing.id)">{{thing.label}}</li>
+  </ul>
+
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
