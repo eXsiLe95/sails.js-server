@@ -18,20 +18,8 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    let things = [
-      {
-        id: 1,
-        label: 'First Thing'
-      },
-      {
-        id: 2,
-        label: 'Second Thing'
-      },
-      {
-        id: 3,
-        label: 'Another Thing'
-      }
-    ];
+    // TODO: Only fetch things the user is supposed to see
+    var things = await Thing.find();
 
     // Respond with view.
     return exits.success({
